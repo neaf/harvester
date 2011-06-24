@@ -1,6 +1,6 @@
-= harvester
+= Harvester
 
-Description goes here.
+Basic Harvest invoice fetcher.
 
 == Contributing to harvester
  
