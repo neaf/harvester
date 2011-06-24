@@ -44,7 +44,7 @@ module Harvester
         :content_type => "application/xml",
         :accept => "application/xml"
       }
-      xml = client.rest_resource["invoices"].get(
+      xml = client.rest_resource["invoices/#{ id }"].get(
         :params => params,
         :headers => headers
       )
