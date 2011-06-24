@@ -25,15 +25,31 @@ module Harvester
     end
 
     def all(params = {})
-      doc = Nokogiri::XML(client.rest_resource["invoices"].get(:params => params, :headers => { :content_type => 'application/xml', :accept => 'application/xml' }))
+      headers = {
+        :content_type => "application/xml",
+        :accept => "application/xml"
+      }
+      xml = client.rest_resource["invoices"].get(
+        :params => params,
+        :headers => headers
+      )
+      doc = Nokogiri::XML(xml)
       doc.xpath('//invoice').map do |node|
         Invoice.from_node(node)
       end
     end
 
-    def get(id)
-      doc = XmlSimple.xml_in(client.rest_resource["invoices/#{ id }"].get, { "ForceArray" => false })
-      Invoice.from_hash(doc)
+    def get(id, params = {})
+      headers = {
+        :content_type => "application/xml",
+        :accept => "application/xml"
+      }
+      xml = client.rest_resource["invoices"].get(
+        :params => params,
+        :headers => headers
+      )
+      doc = Nokogiri::XML(xml)
+      Invoice.from_node(doc.xpath('//invoice').first)
     end
   end
 end
