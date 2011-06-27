@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "harvester"
   gem.homepage = "http://github.com/neaf/harvester"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Basic Harvest invoice fetcher.}
+  gem.description = %Q{Basic Harvest invoice fetcher.}
   gem.email = "tomasz@werbicki.net"
   gem.authors = ["Tomasz Werbicki"]
   # dependencies defined in Gemfile
