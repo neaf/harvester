@@ -1,0 +1,14 @@
+<client>
+  <id type="integer">11072</id>
+  <name>SuprCorp</name>
+  <active type="boolean">true</active>
+  <details>123 Main St.
+Third Floor
+New York, NY 10011
+USA
+212-555-1212
+212-555-1213 (fax)
+http://www.company.com</details>
+  <updated-at type="datetime">2008-04-09T12:07:56Z</updated-at>
+  <created-at type="datetime">2008-04-09T12:07:56Z</created-at>
+</client>
