@@ -2,7 +2,7 @@ require 'rest-client'
 require 'invoices'
 
 module Harvester
-  class Client
+  class Service
     attr_reader :subdomain, :email, :password, :rest_resource
 
     def initialize(subdomain, email, password)

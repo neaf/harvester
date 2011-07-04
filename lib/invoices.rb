@@ -18,10 +18,10 @@ module Harvester
   end
 
   class Invoices
-    attr_reader :client
+    attr_reader :service
 
-    def initialize(client)
-      @client = client
+    def initialize(service)
+      @service = service
     end
 
     def all(params = {})
@@ -29,7 +29,7 @@ module Harvester
         :content_type => "application/xml",
         :accept => "application/xml"
       }
-      xml = client.rest_resource["invoices"].get(
+      xml = service.rest_resource["invoices"].get(
         :params => params,
         :headers => headers
       )
@@ -44,7 +44,7 @@ module Harvester
         :content_type => "application/xml",
         :accept => "application/xml"
       }
-      xml = client.rest_resource["invoices/#{ id }"].get(
+      xml = service.rest_resource["invoices/#{ id }"].get(
         :params => params,
         :headers => headers
       )
