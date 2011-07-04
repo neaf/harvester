@@ -31,13 +31,11 @@ describe Harvester::Service do
     it "returns Invoices instance" do
       service.invoices.should be_an_instance_of(Harvester::Invoices)
     end
-    
-    describe "Invoices instance" do
-      let(:invoices) { service.invoices }
+  end
 
-      it "has proper service set" do
-        invoices.service.should eql(service)
-      end
+  describe "#clients" do
+    it "returns Clients instance" do
+      service.clients.should be_an_instance_of(Harvester::Clients)
     end
   end
 end

@@ -1,0 +1,36 @@
+<invoice>
+  <amount type="decimal">20.0</amount>
+  <client-id type="integer">8</client-id>
+  <created-at type="datetime">2008-04-09T12:07:56Z</created-at>
+  <currency>United States Dollars - USD</currency>
+  <due-amount type="decimal">10.0</due-amount>
+  <due-at type="date">2008-02-06</due-at>
+  <due-at-human-format>due upon receipt</due-at-human-format>
+  <id type="integer">1</id>
+  <issued-at type="date">2008-02-06</issued-at>
+  <notes>Some notes go here</notes>
+  <number>100001</number>
+  <period-end type="date">2008-03-31</period-end>
+  <period-start type="date">2007-06-26</period-start>
+  <purchase-order nil="true"></purchase-order>
+  <client-key>f2a56b1232ad1asdf5926f040e8cff2befb5e8f1</client-key>
+  <!-- See invoice messages and invoice payments for manipulating the
+   state attribute.  Direct assigment will be ignored. -->
+  <state>draft</state>
+  <updated-at type="datetime">2008-04-09T12:07:56Z</updated-at>
+  <created-at type="datetime">2008-04-09T12:07:56Z</created-at>
+  <!-- Line items in CSV format -->
+  <csv-line-items>
+kind,description,quantity,unit_price,amount,taxed,taxed2,project_id
+Service,Security support / Apply upgrades,0.68,80.00,54.4,true,false,3
+Service,Security support / Intrusion detection,0.57,80.00,45.6,true,false,3
+Service,Backend Programming / Forum admin,1.20,80.00,96.0,true,false,3
+  </csv-line-items>
+  <!-- applied a 10% tax on all line items marked as taxed -->
+  <tax type="decimal">10</tax>
+  <!-- no second tax -->
+  <tax2 type="decimal" nil="true"></tax2>
+  <!-- tax amount -->
+  <tax-amount type="decimal">23.04</tax-amount>
+  <tax2-amount type="decimal" nil="true">0</tax2-amount>
+</invoice>
